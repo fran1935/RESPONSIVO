@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto 2</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="1.png" type="image/x-icon">
+
+    <script>
+        function validarFormulario() {
+            var selectElement = document.getElementById("nacionalidad");
+            var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+            
+            if (selectedOption === "") {
+                alert("Por favor, selecciona una opcion.");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+    
+</head>
+<body>
+    
+
+    <nav >
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="nuestrosdestinos.html">Nuestros destinos</a>
+        <a class="active" href="contacto.html">Contacto</a>
+    </nav>
+    <main class="formularium">
+        <div class="container-contact">
+
+            <h1 class="logo">Contactanos</h1>
+
+            <div class="contactanos">
+                <div class="contact-form">
+                    <!-- <img src="1.png" alt="icono"> -->
+                    <!-- Inicio del formulario con la acción "htpps:direccion api" -->
+                    <form id="miFormulario" action="https://formsubmit.co/marvas1935@gmail.com" method="POST">
+                        <input  type="text" id="opcion" name="nacionalidad" readonly class="miInput"> 
+
+                        <p>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Su nombre" required>
+                        </p>
+                        <p>
+                            <label for="email" >Email</label>
+                            <input type="email" id="email" name="email"  placeholder=" Su Email " required>
+                        </p>
+
+                        <p>
+                            <label for="consulta">Consulta</label>
+                            <input type="text" id="consulta" name="consulta" placeholder=" Tema de consulta" required>
+                        </p>
+                        <p>
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" id="tele"  name="phone"  placeholder=" Su Telefono" required>
+                        </p>
+                        
+
+                    
+                        <p class="block">
+                            <label for="message">Mensaje</label> 
+                        
+                            <textarea id="mensaje" name="message" rows="3" placeholder="Su mensaje" required></textarea>
+                            <div class="form-checkboxes">
+                                <h4 class="pago">Forma de Pago:</h4>
+                                <div class="row">
+                                  <div class="checkbox">
+                                    <input type="checkbox" id="opcion1" name="payment_option" value="Efectivo">
+                                    <label for="opcion1">Efectivo</label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <input type="checkbox" id="opcion2" name="payment_option" value="Visa">
+                                    <label for="opcion2">Visa</label>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="checkbox">
+                                    <input type="checkbox" id="opcion3" name="payment_option" value="Mastercard">
+                                    <label for="opcion3">Mastercard</label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <input type="checkbox" id="opcion4" name="payment_option" value="Pagadios">
+                                    <label for="opcion4">Pagadios</label>
+                                  </div>
+                                </div>
+                                </div>
+
+                            
+                                <div class="nacionalidad"> 
+                                    <h4 class="titnacionalidad">Nacionalidad:</h4>
+                                
+                                    <label for="nacionalidad"></label> 
+                                    <select id="nacionalidad" name="nacionalidad" onchange="actualizarNombre()">
+                                        <option value="Otro">De que Nacion eres?</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Bolivia">Bolivia</option>
+                                        <option value="Brasil">Brasil</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Ecuador">Ecuador</option>
+                                        <option value="Paraguay">Paraguay</option>
+                                        <option value="Peru">Peru</option>
+                                        <option value="Uruguay">Uruguay</option>
+                                        <option value="Venezuela">Venezuela</option>
+                                    </select>
+                                        <!-- <label for="nacionalidad" class="ocultarLabel"></label> -->
+                                         <input  type="text" id="nacionalidad" name="nacionalidad" readonly class="miInput"> 
+
+                                </div>
+                                
+
+                            
+                            <div class="radiobox">
+                                <h4 class="titradio">Sexo:</h4>
+                                    <label>
+                                        <input type="radio" name="sexo" value="Hombre"> Hombre   
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sexo" value="Mujer"> Mujer
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sexo" value="No Binario"> No Binario
+                                    </label>
+                                </p>
+                            </div>      
+                        </p>
+
+                        <button class="block" type="submit">Enviar</button>
+
+                    
+
+                      <!-- Campo de entrada oculto para la redirección después de enviar el formulario -->
+                      <input type="hidden" name="_next" value="htpp://127.0.0.1:5501">
+                      <!-- Campo de entrada oculto para deshabilitar el captcha -->
+                      <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p>FotoAventuras combina turismo emocionante con fotografía de calidad, ofreciendo experiencias únicas y recuerdos inolvidables en destinos fascinantes.</p>
+                    <h4 class="masinfo">Mas Info</h4>
+                    <ul>
+
+                        <li> Galerias Pacifico, local 121 CABA</li>
+                        <li> 11 2345 6543</li>
+                        <li>fotoaventuras@website.com</li>
+                    </ul>
+
+                    <p>Fotoaventuras.com</p>
+                    <div class="form-txt">
+                        <a href="#">Politica de privacidad</a>
+                        <a href="#">Terminos y condiciones</a>
+                    </div>
+                </div>
+
+                <!-- Div para los enlaces de política de privacidad y términos y condiciones -->
+
+
+            
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    
+
+    <footer>
+        <div class="redesFooter">
+            <h3>Seguinos</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384171.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384168.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384172.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/3046/3046113.png" width="20">
+        </div>
+        <div class="mapaFooter">
+            <h3>Nuestras oficinas <img src="https://cdn-icons-png.flaticon.com/128/15567/15567908.png" width="20"></h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.043447416509!2d-58.37403458351481!3d-34.60361218081263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb0b1afcaf%3A0x8d53a5cf4f399e9c!2zR2FsZXLDrWFzIFBhY8OtZmljbw!5e0!3m2!1ses-419!2sar!4v1714345582251!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Galerías Pacifico, local 121</p>
+            <p>CABA, Buenos Aires, Argentina</p>
+        </div>
+        <div class="AyudaFooter">
+            <h3>Más información</h3>
+            <p>Whatsapp  <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384178.png" width="20"></a></p>
+            <p>Teléfonos  <a href="contacto.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/7313/7313423.png" width="20"></a></p>
+            <p>Formulario  <a href="contacto.html" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/1644/1644229.png" width="20"></a></p>
+        </div>
+        <div class="mediosdePagoFooter">
+            <h3>Medios de Pago</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/12956/12956788.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/15539/15539971.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/349/349247.png" width="20">
+                <img src="https://cdn-icons-png.flaticon.com/128/1325/1325284.png" width="20">
+        </div>
+        <div class="copyFooter">
+            <p>&copy;Fotoaventuras 2024</p>
+        </div>
+    </footer>
+</body>
+</html> 
+
+
+
+<!-- 
